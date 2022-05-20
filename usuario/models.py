@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 
@@ -39,6 +40,7 @@ class Usuario(AbstractUser):
     longitude = models.CharField('Longitude', max_length=20, blank=True, null=True)
     is_staff = models.BooleanField('Membro da Equipe', default=False)
     pago = models.BooleanField('Pago', default=False)
+    vencimento = models.DateTimeField(default=timezone.now(), blank=True, null=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['nome', 'sobrenome', 'celular']
