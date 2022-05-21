@@ -15,6 +15,7 @@ router.register(r'produto', ProdutoViewSet)
 
 urlpatterns = [
                   path('admin/', admin.site.urls),
-                  path('', include(router.urls)),
+                  path('', include('core.urls')),
+                  path('api/', include(router.urls)),
                   path('login/', obtain_auth_token),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
