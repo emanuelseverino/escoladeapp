@@ -19,7 +19,6 @@ class ProdutoSerializer(ModelSerializer):
 
 
 class ProdutoTodosSerializer(ModelSerializer):
-
     class Meta:
         model = Produto
-        fields = ['foto', 'nome', 'marca', 'descricao', 'preco', 'codigo_de_barras',]
+        fields = ['id', 'foto', 'nome', 'marca', 'descricao', 'preco', 'codigo_de_barras', ]
