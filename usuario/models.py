@@ -40,7 +40,7 @@ class Usuario(AbstractUser):
     longitude = models.CharField('Longitude', max_length=20, blank=True, null=True)
     is_staff = models.BooleanField('Membro da Equipe', default=False)
     pago = models.BooleanField('Pago', default=False)
-    vencimento = models.DateTimeField(default=timezone.now(), blank=True, null=True)
+    vencimento = models.DateTimeField(default=timezone.now, blank=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['nome', 'sobrenome', 'celular']
