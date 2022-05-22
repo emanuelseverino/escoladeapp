@@ -16,3 +16,10 @@ class ProdutoSerializer(ModelSerializer):
         model = Produto
         fields = '__all__'
         # fields = ['foto', 'nome', 'sobrenome', 'celular', 'cidade', 'latitude', 'longitude', ]
+
+
+class ProdutoTodosSerializer(ModelSerializer):
+
+    class Meta:
+        model = Produto
+        fields = ['foto', 'nome', 'marca', 'descricao', 'preco', 'codigo_de_barras',]
