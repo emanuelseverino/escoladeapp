@@ -13,5 +13,5 @@ class TarefaViewSet(ModelViewSet):
     permission_classes = [IsAuthenticatedOrReadOnly, ]
 
     def get_queryset(self):
-        return self.queryset.filter()[:10]
+        return self.queryset.filter()
 
