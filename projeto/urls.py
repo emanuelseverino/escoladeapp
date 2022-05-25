@@ -6,12 +6,14 @@ from django.conf.urls.static import static
 from rest_framework.authtoken.views import obtain_auth_token
 
 from produto.api.viewsets import ProdutoViewSet, ProdutoTodosViewSet
+from tarefa.api.viewsets import TarefaViewSet
 from usuario.api.viewsets import CriarUsuarioViewSet, UsuarioViewSet
 
 router = routers.DefaultRouter()
 router.register(r'usuario', UsuarioViewSet)
 router.register(r'cadastro', CriarUsuarioViewSet)
 router.register(r'produto', ProdutoViewSet)
+router.register(r'tarefa', TarefaViewSet)
 router.register(r'todos/produtos', ProdutoTodosViewSet)
 
 urlpatterns = [
