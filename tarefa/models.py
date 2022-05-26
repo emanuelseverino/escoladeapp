@@ -14,5 +14,5 @@ class Tarefa(models.Model):
     class Meta:
         verbose_name = 'Tarefa'
         verbose_name_plural = 'Tarefas'
-        ordering = ('modificado',)
+        ordering = ('-modificado',)
 
