@@ -9,7 +9,7 @@ class TarefaViewSet(ModelViewSet):
     queryset = Tarefa.objects.all()
     serializer_class = TarefaSerializer
     filter_backends = [filters.SearchFilter]
-    ordering_fields = ['criado', ]
+    ordering_fields = ['modificado', ]
     permission_classes = [IsAuthenticatedOrReadOnly, ]
 
     def get_queryset(self):
