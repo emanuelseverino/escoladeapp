@@ -16,6 +16,7 @@ INSTALLED_APPS = [
     'produto.apps.ProdutoConfig',
     'core.apps.CoreConfig',
     'tarefa.apps.TarefaConfig',
+    'postagem.apps.PostagemConfig',
 ]
 
 MIDDLEWARE = [
