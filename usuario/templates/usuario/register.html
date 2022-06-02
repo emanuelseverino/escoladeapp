@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block script %}
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-6">oi</div>
+    <div class="col-6">
+        <h2>Cria uma conta</h2>
+        <p>Faça seu cadastro para poder ter acesso a api e seu token.</p>
+        <form method="post">
+            {% csrf_token %}
+            {% for error in form.non_field_errors %}
+            <div class="alert alert-danger">
+                {{ error }}
+            </div>
+            {% endfor %}
+            {% for field in form %}
+            {{ field.name }}
+            {% endfor %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nome">Nome</label>
+                    <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="sobrenome">Sobrenome</label>
+                    <input type="text" class="form-control" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="username">E-mail</label>
+                <input type="email" class="form-control" name="username" id="username" placeholder="E-mail">
+            </div>
+            <div class="form-group">
+                <label for="celular">Celular</label>
+                <input type="tel" class="form-control" name="celular" id="celular"  placeholder="(00) 00000-0000">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="password1">Senha</label>
+                    <input type="password" class="form-control" name="password1" id="password1" placeholder="Senha">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password2">Confirmar senha</label>
+                    <input type="password" class="form-control" name="password2" id="password2"
+                           placeholder="Confirmar senha">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Criar conta</button>
+        </form>
+    </div>
+</div>
+
+{% block funcao %}
+<script>
+        $("#celular").mask("(99) 99999-9999");
+
+</script>
+{% endblock %}
+
+{% endblock %}
