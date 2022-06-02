@@ -9,5 +9,5 @@ from usuario.views import RegisterView
 urlpatterns = [
     path('', IndexView.as_view(), name='index'),
     path('obrigado/', ObrigadoView.as_view(), name='obrigado'),
-    path('cadastro/', RegisterView.as_view()),
+    path('cadastro/', RegisterView.as_view(), name='cadastro'),
 ]

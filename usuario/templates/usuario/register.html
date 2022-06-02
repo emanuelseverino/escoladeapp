@@ -4,7 +4,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
-
 {% endblock %}
 
 {% block content %}
@@ -43,7 +42,7 @@
             </div>
             <div class="form-group">
                 <label for="celular">Celular</label>
-                <input type="tel" class="form-control" name="celular" id="celular"  placeholder="(00) 00000-0000">
+                <input type="tel" class="form-control" name="celular" id="celular" placeholder="(00) 00000-0000">
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
@@ -63,8 +62,7 @@
 
 {% block funcao %}
 <script>
-        $("#celular").mask("(99) 99999-9999");
-
+    $("#celular").mask("(99) 99999-9999");
 </script>
 {% endblock %}
 
